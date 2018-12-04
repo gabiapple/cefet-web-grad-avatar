@@ -15,10 +15,22 @@ color.addEventListener("change", () => {
 	outputCabeca.style.backgroundColor = color.value;
 });
 
+
 let select = document.getElementById("select-image");
 
 select.addEventListener("change", () => {
 	let cabelo = document.getElementById("avatar-cabelo");
 	cabelo.src = select.value;
 });
-// -------
+
+let checkboxes = document.querySelectorAll(".checkbox");
+
+checkboxes.forEach(checkbox => {
+	checkbox.addEventListener("change", function(event) {
+
+		let acessorio = document.getElementById(checkbox.value);
+
+		checkbox.checked ? acessorio.style.visibility = "visible" 
+							: acessorio.style.visibility = "hidden";
+	})
+});
