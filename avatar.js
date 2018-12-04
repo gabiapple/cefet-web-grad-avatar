@@ -5,7 +5,6 @@ nome.addEventListener("input", () => {
 	outputName.innerHTML = nome.value;
 });
 
-	console.log("oi");
 
 let color = document.getElementById("input-color");
 
@@ -16,4 +15,10 @@ color.addEventListener("change", () => {
 	outputCabeca.style.backgroundColor = color.value;
 });
 
+let select = document.getElementById("select-image");
+
+select.addEventListener("change", () => {
+	let cabelo = document.getElementById("avatar-cabelo");
+	cabelo.src = select.value;
+});
 // -------
